@@ -1,0 +1,96 @@
+:root {
+    --Magenta1: hsl(300, 43%, 22%);
+    --Pink: hsla(333, 80%, 67%, 0.623);
+    --Magenta:hsl(303, 10%, 53%);
+    --Light:hsl(300, 24%, 96%);
+    --gray:rgb(139, 139, 139);
+    
+
+  }
+@font-face {
+    font-family: myFirstFont;
+    src: url('../fonts/Spartan-Regular.ttf');
+  }
+  @font-face {
+    font-family: mySecondFont;
+    src: url('../fonts/Spartan-Black.ttf');
+  }
+  @font-face {
+    font-family: myThirdFont;
+    src: url('../fonts/Spartan-Medium.ttf');
+  }
+  @font-face {
+    font-family: myForthFont;
+    src: url('../fonts/Spartan-Bold.ttf');
+  }
+body{
+    background-image: url('../images/bg-pattern-top-desktop.svg'),url('../images/bg-pattern-bottom-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: left top,right bottom;
+    height: 100vh;
+    
+   
+}
+section{
+    opacity :0;
+    margin-top: 150px;
+}
+h1{
+    font-family: myThirdFont,'courier';
+    font-weight: bolder;
+    font-size: 70px;
+    color: var(--Magenta1)
+}
+span{
+    font-family: myForthFont;
+    color:var(--Magenta1)
+}
+p{
+    color:var(--gray);
+    font-size: x-large;
+    text-transform: capitalize;
+}
+p::first-letter{
+    text-transform: capitalize;
+}
+.dir-box{
+    background-color: var(--Light);
+}
+.grounder{
+    background-color: var(--Magenta1);
+}
+.carousel-inner{
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.colorizer{
+    color:var(--Pink);
+}
+@media (max-width: 425px){
+    body{
+        background-image: url('../images/bg-pattern-top-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: left top;
+        height: 100vh;
+        text-align: center;
+       
+    }
+    .dir-box{
+        flex-direction: column;
+    }
+    .stars{
+        width: 30%!important;
+    }
+    h1{
+        font-size: 40px;
+    }
+    p{
+        font-size: medium;
+    }
+    section{
+        margin-top: 50px;
+    }
+}
